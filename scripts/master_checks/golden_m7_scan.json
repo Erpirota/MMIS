@@ -1,0 +1,734 @@
+{
+ "detected_loader": null,
+ "detected_mc_version": "1.20.1",
+ "findings": [
+  {
+   "certainty": "possible",
+   "code": "AMBIGUOUS_LOADER",
+   "evidence": [
+    {
+     "field": null,
+     "file": "mods/alpha-1.2.3.jar",
+     "message": "Compatible loaders: ['fabric', 'quilt']",
+     "raw_value": null
+    },
+    {
+     "field": null,
+     "file": "mods/forgepair.jar",
+     "message": "Compatible loaders: ['forge']",
+     "raw_value": null
+    },
+    {
+     "field": null,
+     "file": "mods/lenient.jar",
+     "message": "Compatible loaders: ['fabric', 'quilt']",
+     "raw_value": null
+    },
+    {
+     "field": null,
+     "file": "mods/neo.jar",
+     "message": "Compatible loaders: ['neoforge']",
+     "raw_value": null
+    },
+    {
+     "field": null,
+     "file": "mods/noversion.jar",
+     "message": "Compatible loaders: ['forge']",
+     "raw_value": null
+    },
+    {
+     "field": null,
+     "file": "mods/quilty.jar",
+     "message": "Compatible loaders: ['quilt']",
+     "raw_value": null
+    }
+   ],
+   "message": "Ambiguous or conflicting mod loaders across jars (fabric: 2, forge: 2, neoforge: 1, quilt: 1)",
+   "related_mod_ids": [],
+   "severity": "warning",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "INVALID_METADATA_JSON",
+   "evidence": [
+    {
+     "field": "fabric.mod.json",
+     "file": "mods/badjson.jar",
+     "message": "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+     "raw_value": "{not json"
+    }
+   ],
+   "message": "Malformed JSON in fabric.mod.json: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+   "related_mod_ids": [],
+   "severity": "error",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "INVALID_METADATA_TOML",
+   "evidence": [
+    {
+     "field": "META-INF/mods.toml",
+     "file": "mods/badtoml.jar",
+     "message": "Expected ']]' at the end of an array declaration (at line 1, column 7)",
+     "raw_value": "[[mods\nbroken"
+    }
+   ],
+   "message": "Malformed TOML in META-INF/mods.toml: Expected ']]' at the end of an array declaration (at line 1, column 7)",
+   "related_mod_ids": [],
+   "severity": "error",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "LEGACY_MOD_INFO",
+   "evidence": [
+    {
+     "field": null,
+     "file": "mods/legacy.jar",
+     "message": "Found legacy mcmod.info format",
+     "raw_value": null
+    }
+   ],
+   "message": "Legacy mcmod.info metadata is out of scope and not parsed: mods/legacy.jar",
+   "related_mod_ids": [],
+   "severity": "info",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "LENIENT_JSON_REPAIRED",
+   "evidence": [
+    {
+     "field": "fabric.mod.json",
+     "file": "mods/lenient.jar",
+     "message": "Lenient JSON control characters repaired",
+     "raw_value": null
+    }
+   ],
+   "message": "Repaired raw newlines or tabs in string literals in fabric.mod.json",
+   "related_mod_ids": [],
+   "severity": "info",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "NOT_A_ZIP",
+   "evidence": [
+    {
+     "field": null,
+     "file": "mods/corrupt.jar",
+     "message": "Failed zip validation",
+     "raw_value": null
+    }
+   ],
+   "message": "File is not a valid zip archive: mods/corrupt.jar",
+   "related_mod_ids": [],
+   "severity": "error",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "NO_METADATA",
+   "evidence": [
+    {
+     "field": null,
+     "file": "mods/empty.jar",
+     "message": "No fabric, quilt, or forge metadata found",
+     "raw_value": null
+    }
+   ],
+   "message": "No supported mod metadata found in mods/empty.jar",
+   "related_mod_ids": [],
+   "severity": "warning",
+   "suggestion": null
+  },
+  {
+   "certainty": "certain",
+   "code": "UNRESOLVED_PLACEHOLDER",
+   "evidence": [
+    {
+     "field": "mods.noversion.version",
+     "file": "mods/noversion.jar",
+     "message": "Placeholder could not be resolved from manifest",
+     "raw_value": "${file.jarVersion}"
+    }
+   ],
+   "message": "Unresolved version placeholder in META-INF/mods.toml: ${file.jarVersion}",
+   "related_mod_ids": [
+    "noversion"
+   ],
+   "severity": "warning",
+   "suggestion": null
+  }
+ ],
+ "jars": [
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "alpha"
+   ],
+   "parent_path": null,
+   "path": "mods/alpha-1.2.3.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 699
+  },
+  {
+   "is_disabled": false,
+   "is_nested": true,
+   "mods": [
+    "nestedlib"
+   ],
+   "parent_path": "mods/alpha-1.2.3.jar",
+   "path": "mods/alpha-1.2.3.jar!/META-INF/jars/nestedlib-0.3.0.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 182
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [],
+   "parent_path": null,
+   "path": "mods/badjson.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 139
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [],
+   "parent_path": null,
+   "path": "mods/badtoml.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 149
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [],
+   "parent_path": null,
+   "path": "mods/corrupt.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 17
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [],
+   "parent_path": null,
+   "path": "mods/empty.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 127
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "forgeone",
+    "forgetwo"
+   ],
+   "parent_path": null,
+   "path": "mods/forgepair.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 516
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [],
+   "parent_path": null,
+   "path": "mods/legacy.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 122
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "lenient"
+   ],
+   "parent_path": null,
+   "path": "mods/lenient.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 190
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "neo"
+   ],
+   "parent_path": null,
+   "path": "mods/neo.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 302
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "noversion"
+   ],
+   "parent_path": null,
+   "path": "mods/noversion.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 215
+  },
+  {
+   "is_disabled": true,
+   "is_nested": false,
+   "mods": [
+    "off"
+   ],
+   "parent_path": null,
+   "path": "mods/off.jar.disabled",
+   "sha256": "<build-dependent>",
+   "size_bytes": 172
+  },
+  {
+   "is_disabled": false,
+   "is_nested": false,
+   "mods": [
+    "quilty"
+   ],
+   "parent_path": null,
+   "path": "mods/quilty.jar",
+   "sha256": "<build-dependent>",
+   "size_bytes": 312
+  }
+ ],
+ "mc_constraints": {
+  "1.20.1": 1,
+  "[1.20.1]": 1
+ },
+ "mods": [
+  {
+   "authors": [
+    "Ann",
+    "Bob"
+   ],
+   "dependencies": [
+    {
+     "declared_as": "depends",
+     "kind": "required",
+     "mod_id": "minecraft",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "=",
+         "1.20.1"
+        ]
+       ]
+      ],
+      "raw": "1.20.1",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "depends",
+     "kind": "required",
+     "mod_id": "fabricloader",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         ">=",
+         "0.15.0"
+        ]
+       ]
+      ],
+      "raw": ">=0.15.0",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "depends",
+     "kind": "required",
+     "mod_id": "beta",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "^",
+         "2.0.0"
+        ]
+       ],
+       [
+        [
+         "wildcard",
+         "1.9"
+        ]
+       ]
+      ],
+      "raw": "[\"^2.0.0\", \"1.9.x\"]",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "recommends",
+     "kind": "optional",
+     "mod_id": "gamma",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "*",
+         ""
+        ]
+       ]
+      ],
+      "raw": "*",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "suggests",
+     "kind": "optional",
+     "mod_id": "delta",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         ">=",
+         "1"
+        ]
+       ]
+      ],
+      "raw": ">=1",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "conflicts",
+     "kind": "conflicts",
+     "mod_id": "meh",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "*",
+         ""
+        ]
+       ]
+      ],
+      "raw": "*",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "breaks",
+     "kind": "breaks",
+     "mod_id": "badmod",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "<",
+         "3.0.0"
+        ]
+       ]
+      ],
+      "raw": "<3.0.0",
+      "syntax": "fabric"
+     }
+    }
+   ],
+   "description": "desc",
+   "environment": "client",
+   "id": "alpha",
+   "is_nested": false,
+   "jar_path": "mods/alpha-1.2.3.jar",
+   "license": "MIT",
+   "loaders": [
+    "fabric"
+   ],
+   "metadata_file": "fabric.mod.json",
+   "name": "Alpha Mod",
+   "parent_jar": null,
+   "provides": [
+    "alpha_api"
+   ],
+   "related_files": [
+    "config/alpha-client.toml",
+    "config/alpha/main.json"
+   ],
+   "version": "1.2.3"
+  },
+  {
+   "authors": [],
+   "dependencies": [
+    {
+     "declared_as": "mandatory=true",
+     "kind": "required",
+     "mod_id": "minecraft",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       "[1.20.1]"
+      ],
+      "raw": "[1.20.1]",
+      "syntax": "maven"
+     }
+    },
+    {
+     "declared_as": "mandatory=false",
+     "kind": "optional",
+     "mod_id": "optlib",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       "[1.0,2.0)"
+      ],
+      "raw": "[1.0,2.0)",
+      "syntax": "maven"
+     }
+    }
+   ],
+   "description": null,
+   "environment": null,
+   "id": "forgeone",
+   "is_nested": false,
+   "jar_path": "mods/forgepair.jar",
+   "license": "LGPL",
+   "loaders": [
+    "forge"
+   ],
+   "metadata_file": "META-INF/mods.toml",
+   "name": "Forge One",
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": "4.5.6"
+  },
+  {
+   "authors": [],
+   "dependencies": [],
+   "description": null,
+   "environment": null,
+   "id": "forgetwo",
+   "is_nested": false,
+   "jar_path": "mods/forgepair.jar",
+   "license": "LGPL",
+   "loaders": [
+    "forge"
+   ],
+   "metadata_file": "META-INF/mods.toml",
+   "name": null,
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": "1.0"
+  },
+  {
+   "authors": [],
+   "dependencies": [],
+   "description": "line1\nline2\ttab",
+   "environment": null,
+   "id": "lenient",
+   "is_nested": false,
+   "jar_path": "mods/lenient.jar",
+   "license": null,
+   "loaders": [
+    "fabric"
+   ],
+   "metadata_file": "fabric.mod.json",
+   "name": null,
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": null
+  },
+  {
+   "authors": [],
+   "dependencies": [
+    {
+     "declared_as": "incompatible",
+     "kind": "breaks",
+     "mod_id": "other",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       "[1,)"
+      ],
+      "raw": "[1,)",
+      "syntax": "maven"
+     }
+    },
+    {
+     "declared_as": "discouraged",
+     "kind": "conflicts",
+     "mod_id": "meh2",
+     "version_range": null
+    },
+    {
+     "declared_as": "required",
+     "kind": "required",
+     "mod_id": "req",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       "[3.1,)"
+      ],
+      "raw": "[3.1,)",
+      "syntax": "maven"
+     }
+    }
+   ],
+   "description": null,
+   "environment": null,
+   "id": "neo",
+   "is_nested": false,
+   "jar_path": "mods/neo.jar",
+   "license": null,
+   "loaders": [
+    "neoforge"
+   ],
+   "metadata_file": "META-INF/neoforge.mods.toml",
+   "name": null,
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": "2.0.0"
+  },
+  {
+   "authors": [],
+   "dependencies": [],
+   "description": null,
+   "environment": null,
+   "id": "nestedlib",
+   "is_nested": true,
+   "jar_path": "mods/alpha-1.2.3.jar!/META-INF/jars/nestedlib-0.3.0.jar",
+   "license": null,
+   "loaders": [
+    "fabric"
+   ],
+   "metadata_file": "fabric.mod.json",
+   "name": null,
+   "parent_jar": "mods/alpha-1.2.3.jar",
+   "provides": [],
+   "related_files": [],
+   "version": "0.3.0"
+  },
+  {
+   "authors": [],
+   "dependencies": [],
+   "description": null,
+   "environment": null,
+   "id": "noversion",
+   "is_nested": false,
+   "jar_path": "mods/noversion.jar",
+   "license": null,
+   "loaders": [
+    "forge"
+   ],
+   "metadata_file": "META-INF/mods.toml",
+   "name": null,
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": null
+  },
+  {
+   "authors": [],
+   "dependencies": [],
+   "description": null,
+   "environment": null,
+   "id": "off",
+   "is_nested": false,
+   "jar_path": "mods/off.jar.disabled",
+   "license": null,
+   "loaders": [
+    "fabric"
+   ],
+   "metadata_file": "fabric.mod.json",
+   "name": null,
+   "parent_jar": null,
+   "provides": [],
+   "related_files": [],
+   "version": "1"
+  },
+  {
+   "authors": [],
+   "dependencies": [
+    {
+     "declared_as": "depends",
+     "kind": "required",
+     "mod_id": "simple_dep",
+     "version_range": null
+    },
+    {
+     "declared_as": "depends",
+     "kind": "required",
+     "mod_id": "qdep",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         ">=",
+         "1.0.0"
+        ]
+       ]
+      ],
+      "raw": ">=1.0.0",
+      "syntax": "fabric"
+     }
+    },
+    {
+     "declared_as": "depends",
+     "kind": "optional",
+     "mod_id": "qopt",
+     "version_range": null
+    },
+    {
+     "declared_as": "breaks",
+     "kind": "breaks",
+     "mod_id": "qbad",
+     "version_range": {
+      "is_valid": true,
+      "parsed": [
+       [
+        [
+         "*",
+         ""
+        ]
+       ]
+      ],
+      "raw": "*",
+      "syntax": "fabric"
+     }
+    }
+   ],
+   "description": null,
+   "environment": null,
+   "id": "quilty",
+   "is_nested": false,
+   "jar_path": "mods/quilty.jar",
+   "license": null,
+   "loaders": [
+    "quilt"
+   ],
+   "metadata_file": "quilt.mod.json",
+   "name": "Quilty",
+   "parent_jar": null,
+   "provides": [
+    "quilty_api",
+    "quilty_extra"
+   ],
+   "related_files": [],
+   "version": "0.1.0"
+  }
+ ],
+ "mods_dir": "mods",
+ "scanned_path": "."
+}

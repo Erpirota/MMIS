@@ -1,0 +1,11 @@
+[12:00:00] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.11
+[12:00:01] [main/INFO]: Loading 15 mods
+[12:00:02] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5
+[12:00:03] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[12:00:04] [Server thread/ERROR]: Encountered an unexpected exception
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3537)
+	at java.base/java.io.ByteArrayOutputStream.grow(ByteArrayOutputStream.java:120)
+	at net.minecraft.server.MinecraftServer.loadWorld(MinecraftServer.java:380)
+[12:00:05] [Server thread/ERROR]: This crash report has been saved to: crash-reports/crash-2026-10-05.txt
+[12:00:06] [Server thread/INFO]: Stopping server

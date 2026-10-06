@@ -1,0 +1,36 @@
+---- Minecraft Crash Report ----
+// Why did you do that?
+
+Time: 2026-03-02 21:14:55
+Description: Rendering overlay
+
+java.lang.RuntimeException: Failed to bake model for shinyblocks:lamp
+	at com.example.shinyblocks.client.ModelBaker.bake(ModelBaker.java:88) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+	at net.minecraft.client.resources.model.ModelBakery.m_119341_(ModelBakery.java:412) ~[client-1.20.1-20230612.114412-srg.jar%23250!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:fastrender.mixins.json:ModelBakeryMixin,pl:mixin:A}
+	at net.minecraft.client.Minecraft.m_91383_(Minecraft.java:1211) ~[client-1.20.1-20230612.114412-srg.jar%23250!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:mixin:A}
+	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-47.2.0.jar:?] {re:classloading}
+Caused by: java.lang.IllegalStateException: Texture atlas not ready
+	at com.example.shinyblocks.client.AtlasHelper.sprite(AtlasHelper.java:41) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+	at com.example.shinyblocks.client.ModelBaker.bake(ModelBaker.java:80) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+	... 3 more
+Caused by: java.lang.NullPointerException: Cannot invoke "net.minecraft.client.renderer.texture.TextureAtlas.m_118316_(net.minecraft.resources.ResourceLocation)" because "atlas" is null
+	at com.example.shinyblocks.client.AtlasHelper.lookup(AtlasHelper.java:27) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+	... 5 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 17.0.8, Microsoft
+	Memory: 1234567890 bytes (1177 MiB) / 4294967296 bytes (4096 MiB) up to 8589934592 bytes (8192 MiB)
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	Mod List:
+		client-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: a1:d4:5e
+		forge-1.20.1-47.2.0-universal.jar                 |Forge                         |forge                         |47.2.0              |DONE      |Manifest: 84:ce:76
+		shinyblocks-2.4.1.jar                             |Shiny Blocks                  |shinyblocks                   |2.4.1               |DONE      |Manifest: NOSIGNATURE
+		fastrender-0.9.jar                                |Fast Render                   |fastrender                    |0.9                 |DONE      |Manifest: NOSIGNATURE

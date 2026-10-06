@@ -1,0 +1,19 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2026-10-05 15:30:00
+Description: Initializing game
+
+java.lang.NoClassDefFoundError: net/fabricmc/fabric/api/item/v1/FabricItemSettings
+	at com.example.mymod.MyMod.onInitialize(MyMod.java:25)
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:180)
+	at net.minecraft.client.main.Main.main(Main.java:210)
+Caused by: java.lang.ClassNotFoundException: net.fabricmc.fabric.api.item.v1.FabricItemSettings
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	... 3 more
+
+-- Fabric Mods --
+	- fabricloader 0.15.11
+	- java 17
+	- minecraft 1.20.1
+	- mymod 1.0.0 [mymod-1.0.0.jar]

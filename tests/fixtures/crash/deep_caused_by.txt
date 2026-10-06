@@ -1,0 +1,22 @@
+---- Minecraft Crash Report ----
+Time: 2026-10-05 19:00:00
+Description: Deep exception chain
+
+java.lang.RuntimeException: Wrapper exception level 1
+	at com.example.wrapper.Level1.execute(Level1.java:10)
+	at net.minecraft.client.main.Main.main(Main.java:210)
+Caused by: java.lang.IllegalStateException: Wrapper exception level 2
+	at com.example.wrapper.Level2.process(Level2.java:20)
+	at com.example.wrapper.Level1.execute(Level1.java:8)
+	... 1 more
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at com.example.wrapper.Level2.process(Level2.java:18)
+	... 2 more
+Caused by: java.lang.NullPointerException: Root cause NPE here
+	at com.example.deep.LeafClass.doSomething(LeafClass.java:99) ~[deepmod-1.0.jar:1.0]
+	... 4 more
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1

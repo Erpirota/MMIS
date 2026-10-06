@@ -1,0 +1,22 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 2026-10-05 14:00:00
+Description: Unexpected error
+
+java.lang.RuntimeException: Error in model baking
+	at com.example.shinyblocks.client.ModelBaker.bake(ModelBaker.java:88) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+	at net.minecraft.client.resources.model.ModelBakery.m_119341_(ModelBakery.java:412) ~[client-1.20.1-20230612.114412-srg.jar%23250!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:mixin:APP:fastrender.mixins.json:ModelBakeryMixin,pl:mixin:A}
+Caused by: java.lang.IllegalStateException: Invalid model state
+	at com.example.shinyblocks.client.ModelBaker.validate(ModelBaker.java:120) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+Caused by: java.lang.NullPointerException: Cannot invoke "Object.hashCode()" because "key" is null
+	at com.example.shinyblocks.client.ModelBaker.lookup(ModelBaker.java:140) ~[shinyblocks-2.4.1.jar%23212!/:2.4.1] {re:classloading}
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Java Version: 17.0.8
+	Mod List:
+		shinyblocks-2.4.1.jar                             |Shiny Blocks                  |shinyblocks                   |2.4.1               |DONE      |Manifest: NOSIGNATURE
+		fastrender-0.9.jar                                |Fast Render                   |fastrender                    |0.9                 |DONE      |Manifest: NOSIGNATURE
+		client-1.20.1-20230612.114412-srg.jar            |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: NOSIGNATURE

@@ -1,0 +1,5 @@
+[10:00:01] [main/INFO]: Loading Minecraft 1.20.1 with Fabric Loader 0.15.11
+[10:00:05] [Render thread/INFO]: Setting user: Player
+[10:00:09] [Render thread/WARN]: Missing sound for event: minecraft:item.goat_horn.play
+[10:00:12] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[10:05:44] [Render thread/INFO]: Stopping!

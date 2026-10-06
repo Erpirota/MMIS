@@ -1,0 +1,13 @@
+---- Minecraft Crash Report ----
+// Don't look at me like that!
+
+Time: 2026-10-05 18:00:00
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke entity method
+	at net.minecraft.world.entity.Entity.tick(Entity.java:120)
+	at net.minecraft.world.level.Level.tick(Level.java:450)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1

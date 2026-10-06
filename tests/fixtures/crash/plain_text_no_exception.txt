@@ -1,0 +1,5 @@
+[12:00:00] [main/INFO]: Loading Minecraft 1.20.1
+[12:00:01] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5
+[12:00:02] [Server thread/INFO]: Starting Minecraft server on *:25565
+[12:00:03] [Server thread/INFO]: Preparing level "world"
+[12:00:04] [Server thread/INFO]: Done (1.234s)! For help, type "help"

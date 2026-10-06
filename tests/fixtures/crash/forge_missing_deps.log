@@ -1,0 +1,5 @@
+[12:00:01] [main/INFO] [ne.mi.fm.lo.ModSorter/LOADING]: Loading Minecraft 1.20.1 with Forge 47.2.0
+[12:00:02] [main/ERROR] [ne.mi.fm.lo.ModSorter/LOADING]: Missing or unsupported mandatory dependencies:
+	Mod ID: 'geckolib', Requested by: 'examplemod', Expected range: '[4.2,)', Actual version: '[MISSING]'
+	Mod ID: 'curios', Requested by: 'othermod', Expected range: '[5.4,)', Actual version: '5.1.0'
+net.minecraftforge.fml.LoadingFailedException: Loading errors encountered: [Missing or unsupported mandatory dependencies]
